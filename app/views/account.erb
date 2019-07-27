@@ -1,4 +1,4 @@
-<% require_relative 'pry' %> 
+<%= require_relative 'pry' %> 
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,7 +10,7 @@
     <% if Helpers.is_logged_in?(session) %>
       <h1>Welcome <%= Helpers.current_user(session).username %> </h1>
       <h3>Balance <%= Helpers.current_user(session).balance%></h3>
-      <%binding.pry%>
+      <%=binding.pry%>
       <h4> <a href="/logout">Logout</a> </h4>
     <%end%>
   </body>
